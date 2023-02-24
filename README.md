@@ -25,5 +25,3 @@ Switch to frontend folder
 `npm run dev`
 
 This will start the site on `http://localhost:5173/`
-
-`
