@@ -1,2 +1,17 @@
-<h1>Welcome to SvelteKit</h1>
+<script>
+  import Calendar from '../Components/Calendar.svelte';
+</script>
+
+<style lang="scss">
+  .CalendarContainer {
+    width: 600px;
+  }
+  :global(body) {
+    font-family: 'Inter', sans-serif;
+  }
+</style>
+<h1>CalendMe</h1>
+<div class="CalendarContainer">
+  <Calendar rows={96 / 4} columns={7} />
+</div>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
