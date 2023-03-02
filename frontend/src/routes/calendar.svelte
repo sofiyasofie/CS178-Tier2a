@@ -1,5 +1,13 @@
+<!-- Help from chatgpt for handling submit to go back to login -->
+
 <script>
-    import Calendar from '../Components/Calendar.svelte';
+    import Calendar from '../Components/Calendar.svelte';;
+    function handleSubmit() {
+    // Do any necessary logic here
+    
+    // Navigate back to the login page
+    window.location.href = '/';
+  }
   </script>
   
   <style lang="scss">
@@ -16,3 +24,5 @@
   </div>
   <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
   
+  <button on:click={handleSubmit}>Submit</button>
+
