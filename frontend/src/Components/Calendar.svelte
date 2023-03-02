@@ -30,6 +30,7 @@
     } else {
       target.style.backgroundColor = 'green';
     }
+    alert(target.dataset.rowIndex + target.dataset.columnIndex)
   }
 </script>
 
@@ -42,7 +43,7 @@
 
   .grid button {
     /* Change to 8px if 15 min increments */
-    height: 10px;
+    height: 8px;
     border: 1px solid black;
     background-color: white;
     cursor: pointer;
@@ -61,8 +62,14 @@
   .day {
     flex-basis: calc(100% / 7);
     text-align: center;
+    font-size: 12px;
     font-weight: 400;
   }
+
+  .red {
+    background-color: gray !important;
+  }
+
 </style>
 
 <div class="">
@@ -74,7 +81,7 @@
   <div class="grid">
     {#each Array(rows) as _, rowIndex}
       {#each Array(columns) as _, columnIndex}
-        <button on:click={handleClick} data-row-index={rowIndex} data-column-index={columnIndex}></button>
+        <button class:red={((rowIndex + 4) % 8 === 0)} on:click={handleClick} data-row-index={rowIndex} data-column-index={columnIndex}></button>
       {/each}
     {/each}
   </div>
