@@ -1,5 +1,6 @@
 <script>
   // Default 15 minute time increments
+  // Default if no values passed
   export let rows = 96 / 4;
   export let columns = 7;
   
@@ -41,7 +42,7 @@
 
   .grid button {
     /* Change to 8px if 15 min increments */
-    height: 20px;
+    height: 10px;
     border: 1px solid black;
     background-color: white;
     cursor: pointer;
@@ -49,11 +50,7 @@
 
   .grid button:hover {
     /* TODO: (seanroades) Change to darken instead of gray */
-    /* Change to 8px if 15 min increments */
-    height: 20px;
-    border: 1px solid black;
-    background-color: rgba(192, 192, 192) !important;
-    cursor: pointer;
+    filter: brightness(0.8); /* adjust the value to darken or lighten the element */
   }
 
   .container {

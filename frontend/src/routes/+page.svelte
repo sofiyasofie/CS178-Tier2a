@@ -12,6 +12,6 @@
 </style>
 <h1>CalendMe</h1>
 <div class="CalendarContainer">
-  <Calendar rows={96 / 4} columns={7} />
+  <Calendar rows={96 / 2} columns={7} />
 </div>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
