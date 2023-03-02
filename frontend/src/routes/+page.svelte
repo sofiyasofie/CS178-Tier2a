@@ -1,17 +1,22 @@
+<!-- Help from chatgpt for routing Svelte pages -->
+
 <script>
-  import Calendar from '../Components/Calendar.svelte';
+  import { onMount } from 'svelte';
+  import LoginPage from './login.svelte';
+  import CalendarPage from './calendar.svelte';
+  let currentPage = '';
+  
+  const navigateToPage = (page) => {
+    currentPage = page;
+  };
+  
+  onMount(() => {
+    currentPage = 'login';
+  });
 </script>
 
-<style lang="scss">
-  .CalendarContainer {
-    width: 600px;
-  }
-  :global(body) {
-    font-family: 'Inter', sans-serif;
-  }
-</style>
-<h1>CalendMe</h1>
-<div class="CalendarContainer">
-  <Calendar rows={96 / 2} columns={7} />
-</div>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+{#if currentPage === 'login'}
+  <LoginPage on:login={() => navigateToPage('calendar')} />
+{:else if currentPage === 'calendar'}
+  <CalendarPage />
+{/if}
