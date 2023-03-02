@@ -6,7 +6,7 @@
   import CalendarPage from './calendar.svelte';
   let currentPage = '';
   
-  const navigateToPage = (page) => {
+  const navigateToPage = (/** @type {string} */ page) => {
     currentPage = page;
   };
   

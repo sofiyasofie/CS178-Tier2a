@@ -10,9 +10,11 @@
       font-family: 'Inter', sans-serif;
     }
   </style>
+
+<div>
   <h1>CalendMe</h1>
-  <div class="CalendarContainer">
-    <Calendar rows={96 / 2} columns={7} />
-  </div>
+    <div class="CalendarContainer">
+      <Calendar rows={96 / 1} columns={7} />
+    </div>
   <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-  
+</div>
