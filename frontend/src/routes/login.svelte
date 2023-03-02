@@ -3,16 +3,18 @@
   // import calendar from './calendar.svelte'
   // import { navigate } from 'svelte-routing';
 
-  let email = '';
-  let password = '';
+  let firstname = '';
+  let lastname = '';
 
   import { createEventDispatcher } from 'svelte';
   
   const dispatch = createEventDispatcher();
   
   function handleLogin() {
-    // Do your login logic here
     
+    firstname = 
+    lastname = 
+
     // Dispatch a custom event to notify the parent component that login was successful
     dispatch('login');
   }
@@ -27,11 +29,11 @@
 </script>
 
 <form on:submit={handleLogin}>
-  <label for="email">First name:</label>
-  <input type="text" id="email" bind:value={email}>
+  <label for="firstname">First name:</label>
+  <input type="text" id="firstname" bind:value={firstname}>
   
-  <label for="password">Last name:</label>
-  <input type="password" id="password" bind:value={password}>
+  <label for="lastname">Last name:</label>
+  <input type="lastname" id="lastname" bind:value={lastname}>
   
   <!-- <button type="submit">Log In</button> -->
 </form>
