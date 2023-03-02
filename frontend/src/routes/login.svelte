@@ -27,10 +27,10 @@
 </script>
 
 <form on:submit={handleLogin}>
-  <label for="email">Email:</label>
+  <label for="email">First name:</label>
   <input type="text" id="email" bind:value={email}>
   
-  <label for="password">Password:</label>
+  <label for="password">Last name:</label>
   <input type="password" id="password" bind:value={password}>
   
   <!-- <button type="submit">Log In</button> -->
