@@ -1,4 +1,4 @@
-<!-- Help from asking chatgpt for aid in setting up a login page -->
+<!-- Help from asking chatgpt for aid in setting up a login page and connecting to MongoDB to write data -->
 <script>
   // import calendar from './calendar.svelte'
   // import { navigate } from 'svelte-routing';

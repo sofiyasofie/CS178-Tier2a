@@ -1,3 +1,4 @@
+// Help from chatgpt setting up MongoDB database for storing names and time data
 const express = require('express');
 require('dotenv').config();
 
