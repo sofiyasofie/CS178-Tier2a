@@ -3,7 +3,7 @@
 const MongoClient = require('mongodb').MongoClient;
 
 // Replace the connection string with your own.
-const uri = "mongodb+srv://sofiyalysenko:aaa159357@cluster0.ccjhbsw.mongodb.net/test";
+const uri = "";
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 

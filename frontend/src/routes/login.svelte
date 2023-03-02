@@ -7,16 +7,28 @@
   let lastname = '';
 
   import { createEventDispatcher } from 'svelte';
+  import { insertData } from '../../../backend/db.js'; // import the insertData function
+
   
   const dispatch = createEventDispatcher();
   
   function handleLogin() {
     
-    firstname = 
-    lastname = 
+    // firstname = 
+    // lastname = 
 
+    insertData({ firstname, lastname })
+    .then(() => {
+      // Dispatch a custom event to notify the parent component that login was successful
+      dispatch('login');
+    })
+    .catch(error => {
+      console.error('Error saving data:', error);
+      // Handle the error here
+    });
+    
     // Dispatch a custom event to notify the parent component that login was successful
-    dispatch('login');
+    // dispatch('login');
   }
   
   // function handleLogin() {
