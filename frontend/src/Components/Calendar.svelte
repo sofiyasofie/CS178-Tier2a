@@ -6,8 +6,13 @@
   export let rows = 96 / 1;
   export let columns = 7;
 
+  export let timeRows = 96/1;
+  export let timeCols = 1;
+
   let selectedRow = 0
   let selectedColumn = 0
+
+
 
   // Function to generate a random color
   function getRandomColor() {
@@ -42,6 +47,14 @@
 </script>
 
 <style>
+    /* Help from chatgpt for box creation */
+  .box {
+    display: flex;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 1px;
+    height: 0px;
+    width: 20 px;
+    }
   .grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -76,6 +89,7 @@
     margin-bottom: 5px;
   }
 
+
   .highlighted {
     /* filter: brightness(0.7); adjust the value to darken or lighten the element */
   }
@@ -88,24 +102,113 @@
   .GridContainer {
     background-color: rgb(178, 178, 247);
     width: 100%;
-    padding: 15px;
+    padding: 55px;
     border-radius: 20px;
   }
 </style>
 
 <div class="">
   <p>{selectedRow + " " + selectedColumn}</p>
+  <!-- Help from chatgpt for box creation -->
+  <div class = "box">
+    <br>
+    <br>
+    <br>
+    <br>
+    12 AM
+    <br>
+    <br>
+    1 AM
+    <br>
+    <br>
+    <br>
+    2 AM
+    <br>
+    <br>
+    3 AM
+    <br>
+    <br>
+    <br>
+    4 AM
+    <br>
+    <br>
+    5 AM
+    <br>
+    <br>
+    6 AM
+    <br>
+    <br>
+    <br>
+    7 AM
+    <br>
+    <br>
+    8 AM
+    <br>
+    <br>
+    <br>
+    9 AM
+    <br>
+    <br>
+    10 AM
+    <br>
+    <br>
+    11 AM
+    <br>
+    <br>
+    <br>
+    12 PM
+    <br>
+    <br>
+    1 PM
+    <br>
+    <br>
+    <br>
+    2 PM
+    <br>
+    <br>
+    3 PM
+    <br>
+    <br>
+    <br>
+    4 PM
+    <br>
+    <br>
+    5 PM
+    <br>
+    <br>
+    <br>
+    6 PM
+    <br>
+    <br>
+    7 PM
+    <br>
+    <br>
+    8 PM
+    <br>
+    <br>
+    <br>
+    9 PM
+    <br>
+    <br>
+    10 PM
+    <br>
+    <br>
+    11 PM
+  </div>
   <div class="GridContainer">
     <div class="container">
       {#each ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'] as day}
         <div class="day">{day}</div>
       {/each}
     </div>
+    <!-- Idea: set up a grid on the left side that will show times (an array) -->
+
     <div class="grid">
       {#each Array(rows) as _, rowIndex}
         {#each Array(columns) as _, columnIndex}
           <button class:highlighted={(rowIndex % 4 === 0) || (rowIndex % 3 === 0) || (rowIndex % 2 === 0) || (rowIndex % 1 === 0)} on:click={handleClick} data-row-index={rowIndex} data-column-index={columnIndex}></button>
-        {/each}
+          {/each}
+
         {#if (rowIndex + 1) % 4 === 0 && rowIndex !== 0}
           <div class="Spacer"></div>
           <div class="Spacer"></div>
@@ -115,6 +218,9 @@
           <div class="Spacer"></div>
           <div class="Spacer"></div>
         {/if}
+        <!-- {#if (rowIndex + 1) % 4 === 0 && rowIndex !== 0}
+        <p></p>
+        {/if} -->
       {/each}
     </div>
   </div>
