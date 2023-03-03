@@ -54,6 +54,7 @@
     padding: 1px;
     height: 0px;
     width: 20 px;
+    line-height: 1.375;
     }
   .grid {
     display: grid;
@@ -121,12 +122,10 @@
     1 AM
     <br>
     <br>
-    <br>
     2 AM
     <br>
     <br>
     3 AM
-    <br>
     <br>
     <br>
     4 AM
@@ -138,12 +137,10 @@
     6 AM
     <br>
     <br>
-    <br>
     7 AM
     <br>
     <br>
     8 AM
-    <br>
     <br>
     <br>
     9 AM
@@ -155,12 +152,10 @@
     11 AM
     <br>
     <br>
-    <br>
     12 PM
     <br>
     <br>
     1 PM
-    <br>
     <br>
     <br>
     2 PM
@@ -169,12 +164,10 @@
     3 PM
     <br>
     <br>
-    <br>
     4 PM
     <br>
     <br>
     5 PM
-    <br>
     <br>
     <br>
     6 PM
@@ -184,7 +177,6 @@
     <br>
     <br>
     8 PM
-    <br>
     <br>
     <br>
     9 PM
