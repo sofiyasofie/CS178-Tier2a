@@ -13,6 +13,9 @@
   onMount(() => {
     currentPage = 'login';
   });
+
+  let currFirstname = ""
+  let currLastname = "" 
 </script>
 
 {#if currentPage === 'login'}

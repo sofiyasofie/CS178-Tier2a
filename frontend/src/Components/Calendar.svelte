@@ -54,8 +54,10 @@
     padding: 1px;
     height: 0px;
     width: 20 px;
-    line-height: 1.375;
+    line-height: 1.56;
+    margin-left: 3px;
     }
+
   .grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -101,19 +103,22 @@
   }
 
   .GridContainer {
-    background-color: rgb(178, 178, 247);
+    background-color: rgb(153, 153, 255);
     width: 100%;
-    padding: 55px;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     border-radius: 20px;
+  }
+  div {
+    color: white;
+    font-size: 14px;
   }
 </style>
 
 <div class="">
-  <p>{selectedRow + " " + selectedColumn}</p>
-  <!-- Help from chatgpt for box creation -->
   <div class = "box">
-    <br>
-    <br>
     <br>
     <br>
     12 AM
