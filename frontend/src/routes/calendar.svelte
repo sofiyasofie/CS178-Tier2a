@@ -48,7 +48,7 @@
     const res = await submitAndRecordEndTimeInDB(currFirstname, currLastname);
   
     // Navigate back to the login page
-    window.location.href = '/';
+    // window.location.href = '/';
   }
 </script>
 
