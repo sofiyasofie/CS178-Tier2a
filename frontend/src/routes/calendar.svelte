@@ -2,6 +2,7 @@
 
 <script>
     import Calendar from '../Components/Calendar.svelte';;
+    // Help from chatgpt to export message 
     export let message;
   const baseURL = "http://localhost:4200"
 

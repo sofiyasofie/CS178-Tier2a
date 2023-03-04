@@ -14,15 +14,13 @@
     currentPage = 'login';
   });
 
-  // let currFirstname = ""
-  // let currLastname = "" 
+
   let message = '';
 
+  // Help from chatgpt creating function to transfer data
   function handleLoginDetails(event){
     console.log(event.detail);
     message = event.detail;
-    // currFirstname = event.detail.firstname;
-    // currLastname = event.detail.lastname;
   }
 
 </script>
@@ -30,5 +28,6 @@
 {#if currentPage === 'login'}
   <LoginPage on:login={() => navigateToPage('calendar')} on:loginEvent={handleLoginDetails} />
 {:else if currentPage === 'calendar'}
+    <!-- Help from chatgpt exporting message -->
   <CalendarPage {message}/>
 {/if}
