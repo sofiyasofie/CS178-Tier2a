@@ -48,7 +48,7 @@
     const res = await submitAndRecordEndTimeInDB(currFirstname, currLastname);
   
     // Navigate back to the login page
-    // window.location.href = '/';
+    window.location.href = '/';
   }
 </script>
 
@@ -75,7 +75,7 @@
 </style>
 
 <div>
-  <h1>CS178-Cal</h1>
+  <h1>Welcome, {currFirstname} {currLastname}, to CS178-Cal </h1>
     <div class="CalendarContainer">
       <Calendar rows={96 / 1} columns={7} />
     </div>
