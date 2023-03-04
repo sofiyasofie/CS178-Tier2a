@@ -1,4 +1,4 @@
-<!-- Help from asking chatgpt for aid in setting up a login page -->
+<!-- Help from asking chatgpt for aid in setting up a login page/sending data -->
 <script>
   // import calendar from './calendar.svelte'
   // import { navigate } from 'svelte-routing';
@@ -52,7 +52,12 @@
     console.log("res, done");
 
     // Dispatch a custom event to notify the parent component that login was successful
-    dispatch('login');
+    // With firstname, lastname
+    dispatch("login")
+    const data = {firstname, lastname};
+    dispatch('loginEvent', data);
+    // console.log(firstname,lastname)
+    console.log("Dispatched");
 
     click = true;
   }

@@ -2,7 +2,7 @@
 
 <script>
     import Calendar from '../Components/Calendar.svelte';;
-
+    export let message;
   const baseURL = "http://localhost:4200"
 
   /**
@@ -33,8 +33,12 @@
 
   // Need to get name from little component
   // Change from test test to actual name
-  let currFirstname = 'test';
-  let currLastname = 'test';
+  let currFirstname = message.firstname;
+  let currLastname = message.lastname;
+
+  console.log("First and last name: ")
+  console.log(currFirstname)
+  console.log(currLastname)
   
   async function handleSubmit() {
     // Do any necessary logic here

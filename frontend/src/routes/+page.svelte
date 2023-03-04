@@ -1,4 +1,4 @@
-<!-- Help from chatgpt for routing Svelte pages -->
+<!-- Help from chatgpt for routing Svelte pages, getting data -->
 
 <script>
   import { onMount } from 'svelte';
@@ -14,12 +14,21 @@
     currentPage = 'login';
   });
 
-  let currFirstname = ""
-  let currLastname = "" 
+  // let currFirstname = ""
+  // let currLastname = "" 
+  let message = '';
+
+  function handleLoginDetails(event){
+    console.log(event.detail);
+    message = event.detail;
+    // currFirstname = event.detail.firstname;
+    // currLastname = event.detail.lastname;
+  }
+
 </script>
 
 {#if currentPage === 'login'}
-  <LoginPage on:login={() => navigateToPage('calendar')} />
+  <LoginPage on:login={() => navigateToPage('calendar')} on:loginEvent={handleLoginDetails} />
 {:else if currentPage === 'calendar'}
-  <CalendarPage />
+  <CalendarPage {message}/>
 {/if}
