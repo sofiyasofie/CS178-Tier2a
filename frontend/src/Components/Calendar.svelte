@@ -23,9 +23,6 @@
     }
     return color;
   }
-
-  // TODO: (seanroades) - Dataset should be a dictionary with slots for each timeblock
-  // Then can compare with ranked choice
   
   /**
    * @param {{ target: any; }} event
@@ -47,7 +44,6 @@
 </script>
 
 <style>
-    /* Help from chatgpt for box creation */
   .box {
     display: flex;
     border: 1px solid rgb(255, 255, 255);
@@ -90,11 +86,6 @@
     font-weight: 400;
     color: white;
     margin-bottom: 5px;
-  }
-
-
-  .highlighted {
-    /* filter: brightness(0.7); adjust the value to darken or lighten the element */
   }
 
   .Spacer {
