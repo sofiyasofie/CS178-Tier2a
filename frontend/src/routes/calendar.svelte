@@ -46,9 +46,11 @@
     
     // Send name to DB, it filters for name and records end date
     const res = await submitAndRecordEndTimeInDB(currFirstname, currLastname);
+
+    console.log("submitAndRecordEndTimeInDB res:", res)
   
     // Navigate back to the login page
-    // window.location.href = '/';
+    window.location.href = '/';
   }
 </script>
 
