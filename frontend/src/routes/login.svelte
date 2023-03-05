@@ -1,8 +1,4 @@
-<!-- Help from asking chatgpt for aid in setting up a login page/sending data -->
 <script>
-  // import calendar from './calendar.svelte'
-  // import { navigate } from 'svelte-routing';
-
   let firstname = '';
   let lastname = '';
 
@@ -61,14 +57,6 @@
 
     click = true;
   }
-  
-  // function handleLogin() {
-  //   // Login logic
-  // }
-
-  // function navigateToNewPage() {
-  //   navigate('/new-page');
-  // }
 </script>
 
 <style>
@@ -116,8 +104,6 @@
       
     <label for="lastname">Last name: </label>
     <input type="lastname" id="lastname" bind:value={lastname}>
-    
-    <!-- <button type="submit">Log In</button> -->
   </form>
   <button on:click={handleLogin}>Login</button>
 </div>

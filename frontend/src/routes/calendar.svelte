@@ -30,22 +30,14 @@
     }
 	}
 
-  // Need to get name from little component
-  // Change from test test to actual name
   let currFirstname = message.firstname;
   let currLastname = message.lastname;
-
-  console.log("First and last name: ")
-  console.log(currFirstname)
-  console.log(currLastname)
   
   async function handleSubmit() {
     // Do any necessary logic here
     
     // Send name to DB, it filters for name and records end date
     const res = await submitAndRecordEndTimeInDB(currFirstname, currLastname);
-
-    console.log("submitAndRecordEndTimeInDB res:", res)
   
     // Navigate back to the login page
     window.location.href = '/';
@@ -65,21 +57,29 @@
   }
   .PrimaryButton:hover {
     background-color: rgb(102, 102, 255);
+
   }
   .CalendarContainer {
+    margin: auto;
     width: 600px;
   }
   :global(body) {
     font-family: 'Inter', sans-serif;
   }
+  .center {
+    text-align: center !important;
+  }
+  .buttonContainer {
+    text-align: center;
+  }
 </style>
 
-<div>
-  <h1>Welcome, {currFirstname} {currLastname}, to CS178-Cal </h1>
+<div class="">
+  <h1 class="center">Welcome, {currFirstname} {currLastname}, to CS178-Cal </h1>
     <div class="CalendarContainer">
       <Calendar rows={96 / 1} columns={7} />
     </div>
 </div>
-
-<button class="PrimaryButton" on:click={handleSubmit}>Submit</button>
-
+<div class="buttonContainer">
+  <button class="PrimaryButton center" on:click={handleSubmit}>Submit</button>
+</div>  

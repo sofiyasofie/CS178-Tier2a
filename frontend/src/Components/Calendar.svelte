@@ -12,8 +12,6 @@
   let selectedRow = 0
   let selectedColumn = 0
 
-
-
   // Function to generate a random color
   function getRandomColor() {
     const letters = '0123456789ABCDEF';
