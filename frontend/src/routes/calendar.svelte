@@ -76,6 +76,7 @@
 
 <div class="">
   <h1 class="center">Welcome, {currFirstname} {currLastname}, to CS178-Cal </h1>
+    <p class = "center"><b>Click</b> on a tile to select available times</p>
     <div class="CalendarContainer">
       <Calendar rows={96 / 1} columns={7} />
     </div>
