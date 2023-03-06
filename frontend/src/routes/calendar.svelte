@@ -78,6 +78,7 @@
 
 <div>
   <h1>Welcome, {currFirstname} {currLastname}, to CS178-Cal </h1>
+  <p>Please <b>click</b> to select available times (no drag functionality)</p>
     <div class="CalendarContainer">
       <Calendar rows={96 / 1} columns={7} />
     </div>
