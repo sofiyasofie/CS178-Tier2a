@@ -3,10 +3,10 @@
   // Default if no values passed
   // This are external parameters and will only default to these values 
   // if none are supplied by the parent component
-  export let rows = 96 / 1;
+  export let rows = 60 / 1;
   export let columns = 7;
 
-  export let timeRows = 96/1;
+  export let timeRows = 60/1;
   export let timeCols = 1;
 
   let selectedRow = 0
@@ -48,7 +48,7 @@
     padding: 1px;
     height: 0px;
     width: 20 px;
-    line-height: 3.6;
+    line-height: 1.9;
     margin-left: 3px;
     }
 
@@ -111,33 +111,6 @@
   <div class = "box">
     <br>
     <br>
-    12 AM
-    <br>
-    <br>
-    1 AM
-    <br>
-    <br>
-    2 AM
-    <br>
-    <br>
-    3 AM
-    <br>
-    <br>
-    4 AM
-    <br>
-    <br>
-    5 AM
-    <br>
-    <br>
-    6 AM
-    <br>
-    <br>
-    7 AM
-    <br>
-    <br>
-    8 AM
-    <br>
-    <br>
     9 AM
     <br>
     <br>
@@ -195,7 +168,7 @@
         {#each Array(columns) as _, columnIndex}
           <button class:highlighted={(rowIndex % 4 === 0) || (rowIndex % 3 === 0) || (rowIndex % 2 === 0) || (rowIndex % 1 === 0)} on:click={handleClick} data-row-index={rowIndex} data-column-index={columnIndex}></button>
           {/each}
-
+          
         {#if (rowIndex + 1) % 2 === 0 && rowIndex !== 0}
           <div class="Spacer"></div>
           <div class="Spacer"></div>
@@ -205,6 +178,7 @@
           <div class="Spacer"></div>
           <div class="Spacer"></div>
         {/if}
+
         <!-- {#if (rowIndex + 1) % 4 === 0 && rowIndex !== 0}
         <p></p>
         {/if} -->
