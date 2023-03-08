@@ -48,7 +48,7 @@
     padding: 1px;
     height: 0px;
     width: 20 px;
-    line-height: 1.56;
+    line-height: 3.6;
     margin-left: 3px;
     }
 
@@ -60,7 +60,8 @@
 
   .grid button {
     /* Change to 8px if 15 min increments */
-    height: 10px;
+    border-radius: 20px;
+    height: 25px;
     border: none;
     border-right: 1px solid black;
     border-top: 1px solid black;
