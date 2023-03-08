@@ -196,7 +196,7 @@
           <button class:highlighted={(rowIndex % 4 === 0) || (rowIndex % 3 === 0) || (rowIndex % 2 === 0) || (rowIndex % 1 === 0)} on:click={handleClick} data-row-index={rowIndex} data-column-index={columnIndex}></button>
           {/each}
 
-        {#if (rowIndex + 1) % 4 === 0 && rowIndex !== 0}
+        {#if (rowIndex + 1) % 2 === 0 && rowIndex !== 0}
           <div class="Spacer"></div>
           <div class="Spacer"></div>
           <div class="Spacer"></div>
